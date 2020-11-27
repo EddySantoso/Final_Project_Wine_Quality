@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+      <h3 class="display-4">The Category of Wine </h3>
+        <div class="col text-center">
+            <h3>0 : Bad 1 : Good 2 : Excellent</h3>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h3> Result our prediction is : Your Wine Has Category of {{hasil_prediction}}</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQE7PQ-ZtrwSdMlVgGc3FO3JFwmvrCMRPTj-A&usqp=CAU">
+        </div>
+    </div>
+
+{% endblock body %}

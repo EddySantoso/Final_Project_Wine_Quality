@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+<html>
+    <head>
+        <h1>Data Visualization</h1>
+    </head>
+    <body>
+        {% block body %}
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p> Beberapa Data EDA dari Dataset Wine Quality</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="Type.png">
+                <img src="Density.png">
+                <img src="pH.png">
+                <img src="Sulfur.png">
+            </div>
+        </div>
+        {% endblock body %}
+    </body>
+</html>

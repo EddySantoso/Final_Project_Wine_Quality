@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% block body %}
+        <div class="container pt 5">
+            <div class="row justify-content-center">
+                <div class="col-md-6 mt-3">
+                    <h3>Fill This Form to Predict</h3>
+                    <form action="/" method="POST">
+                        <!--Location-->
+                        <select name="Location" class="form-control form-control10-sm">
+                            <option value-"" disabled selected>Select Type of Wine</option>
+                            {% for item in data_type %}
+                                <option value="{{item}}">{{item}}</option>
+                            {% endfor %}
+                        </select>
+                        <!--Rooms-->
+                        <input type="text" name="fixed acidity" placeholder="Fixed Acidity" class="form-control form-control-sm">
+                        <input type="text" name="volatile acidity" placeholder="Volatile Acidity"  class="form-control form-control-sm">
+                        <input type="text" name="citric acid" placeholder="Citric Acid" class="form-control form-control-sm">
+                        <input type="text" name="residual sugar" placeholder="Residual Sugar" class="form-control form-control-sm">
+                        <input type="text" name="chlorides" placeholder="Chlorides"  class="form-control form-control-sm">
+                        <input type="text" name="free sulfur dioxide" placeholder="Free Sulfur Dioxide" class="form-control form-control-sm">
+                        <input type="text" name="total sulfur dioxide" placeholder="Total Sulfur Dioxide" class="form-control form-control-sm">
+                        <input type="text" name="density" placeholder="Density"  class="form-control form-control-sm">
+                        <input type="text" name="pH" placeholder="pH" class="form-control form-control-sm">
+                        <input type="text" name="sulphates" placeholder="Sulphates" class="form-control form-control-sm">
+                        <input type="text" name="alcohol" placeholder="Alcohol"  class="form-control form-control-sm">
+                        <button type="submit" class="btn btn-succes mt-3">Lets Predict</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endblock body %}
+    </body>
+</html>
